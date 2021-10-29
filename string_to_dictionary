@@ -1,0 +1,26 @@
+given_string = "I like programming"
+answer = {}
+
+# method 1
+answer = {}
+for i in given_string:
+    if i == " " : continue
+    if i not in answer : answer[i] = 1
+    else: answer[i] += 1
+print(answer)
+
+# method 2
+for i in given_string:
+    if i == " " : continue
+    answer[i] = answer.get(i,0)
+    answer[i] += 1
+print(answer)
+
+# method 3
+for i in given_string.replace(" ", ""):
+    answer[i] = answer.get(i,0)
+    answer[i] += 1
+
+print(answer)
+
+
